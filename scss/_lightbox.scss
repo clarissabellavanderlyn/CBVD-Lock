@@ -1,0 +1,27 @@
+.lightbox { width:100vw; height:100dvh; max-width:none; max-height:none; margin:0; padding:0; border:0; background:transparent; color:#fff; overflow:hidden; }
+.lightbox::backdrop { background:rgba(30,13,24,.84); backdrop-filter:blur(10px); }
+.lightbox-backdrop { position:absolute; inset:0; }
+.lightbox-card { position:relative; z-index:1; width:100%; height:100%; padding:18px; display:grid; grid-template-rows:auto 1fr; }
+.lightbox-toolbar { min-height:44px; display:flex; align-items:center; justify-content:space-between; gap:12px; padding-right:52px; }
+.lightbox-counter { font-size:.78rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+.lightbox-hint { color:rgba(255,255,255,.68); font-size:.68rem; }
+.lightbox-close { position:absolute; z-index:4; right:16px; top:16px; border-color:rgba(255,255,255,.24); color:#fff; background:rgba(255,255,255,.1); backdrop-filter:blur(12px); }
+.lightbox-stage { position:relative; min-height:0; display:grid; place-items:center; padding:12px 52px 22px; }
+.lightbox-stage img { display:block; max-width:100%; max-height:calc(100dvh - 105px); width:auto; height:auto; object-fit:contain; border-radius:18px; box-shadow:0 30px 90px rgba(0,0,0,.38); cursor:zoom-out; user-select:none; }
+.lightbox-nav { position:absolute; z-index:3; top:50%; transform:translateY(-50%); width:46px; height:46px; border:1px solid rgba(255,255,255,.25); border-radius:50%; display:grid; place-items:center; color:#fff; background:rgba(255,255,255,.1); backdrop-filter:blur(12px); cursor:pointer; }
+.lightbox-nav:hover { background:rgba(255,255,255,.18); }
+.lightbox-nav:focus-visible { outline:3px solid rgba(255,255,255,.38); outline-offset:3px; }
+.lightbox-prev { left:12px; }
+.lightbox-next { right:12px; }
+.lightbox-nav[hidden] { display:none; }
+.lightbox-open { overflow:hidden; }
+@media (max-width:600px) {
+  .lightbox-card { padding:12px; }
+  .lightbox-toolbar { padding-right:52px; }
+  .lightbox-hint { display:none; }
+  .lightbox-stage { padding:10px 44px 18px; }
+  .lightbox-stage img { max-height:calc(100dvh - 90px); border-radius:14px; }
+  .lightbox-nav { width:40px; height:40px; }
+  .lightbox-prev { left:7px; }
+  .lightbox-next { right:7px; }
+}

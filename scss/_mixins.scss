@@ -1,0 +1,10 @@
+@mixin focus-ring {
+  outline: 3px solid rgba(236, 72, 153, .22);
+  outline-offset: 3px;
+}
+@mixin glass {
+  background: rgba(255,255,255,.74);
+  border: 1px solid rgba(255,255,255,.86);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}

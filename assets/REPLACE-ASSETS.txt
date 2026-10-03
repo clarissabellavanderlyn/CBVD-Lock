@@ -1,0 +1,6 @@
+Temporary asset policy
+-----------------------
+The product logo and preview URLs in js/config.js are online placeholders.
+Replace them with licensed/owned product assets before production.
+
+PWA icons and the OG image included here are local temporary CBVD Lock artwork.
